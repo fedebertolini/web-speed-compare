@@ -3,6 +3,7 @@
 const runner = require('./runner');
 const aggregate = require('./result-aggregation');
 const { getConfig } = require('./config');
+const report = require('./report');
 
 const results = [];
 
@@ -31,7 +32,7 @@ const results = [];
             });
         }
 
-        console.log(results);
+        report.printConsole(results);
     } catch (error) {
         console.error(error);
     }
