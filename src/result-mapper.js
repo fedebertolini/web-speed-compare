@@ -11,5 +11,5 @@ exports.map = result => ({
     networkRequests: result.audits['network-requests'].numericValue,
     totalByteWeight: result.audits['total-byte-weight'].numericValue,
     domSize: result.audits['dom-size'].numericValue,
-    performanceScore: result.categories.performance.score * 100,
+    performanceScore: Math.floor(result.categories.performance.score * 100),
 });
