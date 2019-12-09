@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+const argv = require('minimist')(process.argv.slice(2));
+
 const runner = require('./runner');
 const aggregate = require('./result-aggregation');
 const { getConfig } = require('./config');
@@ -32,7 +34,11 @@ const results = [];
             });
         }
 
-        report.printConsole(results);
+        if (argv.output === 'md') {
+            report.printMarkdown(results);
+        } else {
+            report.printConsole(results);
+        }
     } catch (error) {
         console.error(error);
     }

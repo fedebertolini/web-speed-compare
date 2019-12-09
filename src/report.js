@@ -1,4 +1,5 @@
-const table = require('tty-table');
+const ttyTable = require('tty-table');
+const markdownTable = require('markdown-table');
 
 const metrics = [
     { name: 'performanceScore', value: 'Performance Score' },
@@ -33,5 +34,15 @@ exports.printConsole = results => {
     const { header, rows } = buildTable(results);
     const ttyHeader = header.map(h => ({ value: h }));
 
-    console.log(table(ttyHeader, rows).render());
+    console.log(ttyTable(ttyHeader, rows).render());
+};
+
+exports.printMarkdown = results => {
+    const { header, rows } = buildTable(results);
+    const options = {
+        align: header.map((v, i) => (i === 0 ? 'l' : 'c')),
+    };
+    const table = markdownTable([header, ...rows], options);
+    console.log('\n');
+    console.log(table);
 };

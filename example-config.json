@@ -1,0 +1,21 @@
+{
+    "chromeFlags": ["--no-sandbox", "--headless", "--incognito"],
+    "runs": 5,
+    "pages": [
+        {
+            "url": "https://www.google.com",
+            "name": "Google",
+            "blockedPatterns": []
+        },
+        {
+            "url": "https://www.google.com",
+            "name": "Google w/o JS",
+            "blockedPatterns": ["*xjs*"]
+        },
+        {
+            "url": "https://www.google.com",
+            "name": "Google w/o icons",
+            "blockedPatterns": ["*.svg*"]
+        }
+    ]
+}
