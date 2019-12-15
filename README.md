@@ -48,5 +48,19 @@ Example:
 `web-speed-compare --config-file=config.json --output=md`
 
 ```
-
+| Metric                  | Google | Google w/o JS | Google w/o icons |
+| :---------------------- | :----: | :-----------: | :--------------: |
+| Performance Score       |   96   |      100      |        96        |
+| First Contentful Paint  |  1245  |      1269     |       1268       |
+| First Meaningful Paint  |  1260  |      1272     |       1294       |
+| Speed Index             |  1602  |      1480     |       1656       |
+| Estimated Input Latency |   42   |       12      |        45        |
+| Total Blocking Time     |   312  |       0       |        340       |
+| Max Potential FID       |   238  |       48      |        230       |
+| Time To First Byte      |   97   |       98      |        92        |
+| First CPU Idle          |  3426  |      1272     |       3411       |
+| Time to Iteractive      |  3662  |      1272     |       3647       |
+| NetworkRequests         |   29   |       10      |        30        |
+| Total Byte Weight       | 308711 |     83967     |      305444      |
+| DOM Size                |   411  |      388      |        411       |
 ```
