@@ -11,7 +11,7 @@
     "start": "node src/index.js"
   },
   "bin": {
-    "lighthouse-fauna": "src/index.js"
+    "web-speed-compare": "src/index.js"
   },
   "dependencies": {
     "chrome-launcher": "^0.12.0",
