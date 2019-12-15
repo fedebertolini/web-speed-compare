@@ -1,6 +1,6 @@
 {
   "name": "web-speed-compare",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "NodeJS app that runs lighthouse against multiple websites and reports the comparison",
   "main": "src/index.js",
   "repository": "git@github.com:fedebertolini/web-speed-compare.git",
